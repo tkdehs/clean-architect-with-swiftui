@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import Kingfisher
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -22,6 +23,7 @@ struct ContentView: View {
                 ForEach(items) { item in
                     NavigationLink {
                         Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                            
                     } label: {
                         Text(item.timestamp!, formatter: itemFormatter)
                     }
